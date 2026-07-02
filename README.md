@@ -4,7 +4,7 @@
 
 ReadOutLoud 是一个基于 `Python + Tkinter + edge-tts` 的 macOS 桌面小工具，适合英语老师批量生成词汇朗读材料，也适合学习者自己做跟读和磨耳朵音频。
 
-![ReadOutLoud 海报](landing-page/assets/hero-poster.png)
+![ReadOutLoud 海报](landing-page/assets/hero-poster-v2.png)
 
 ## 亮点
 
