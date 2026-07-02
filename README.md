@@ -5,7 +5,7 @@
 [![edge-tts](https://img.shields.io/badge/TTS-edge--tts-0078D4?logo=microsoft&logoColor=white)](https://github.com/rany2/edge-tts)
 [![License](https://img.shields.io/badge/License-MIT-22c55e)](LICENSE)
 
-[中文](#中文) · [English](#english)
+[中文](#中文) · [English](#english) · [日本語](#日本語)
 
 ---
 
@@ -166,3 +166,82 @@ After that, you can double-click it normally.
 
 - Email: `socranote@gmail.com`
 - WeChat: `yxkenglish`
+
+---
+
+<a name="日本語"></a>
+
+## 日本語
+
+英単語・文・段落を、自然な英語音声に素早く変換するツールです。
+
+ReadOutLoud は `Python + Tkinter + edge-tts` で構築された macOS デスクトップアプリです。英語教師が語彙音声教材を一括作成したり、学習者がシャドーイング・リスニング練習用の音声を自作したりするのに役立ちます。
+
+### 主な機能
+
+- **一括変換** — 複数行のテキストをワンクリックで音声ファイルに変換
+- **多彩な音声** — アメリカ英語・イギリス英語、男声・女声を選択可能
+- **速度調整** — 再生速度をパーセントで細かく設定
+- **柔軟な出力** — 文ごとに個別ファイル生成、またはまとめて1ファイルに結合
+- **シャドーイングモード** — 各フレーズを異なる音声で3回繰り返し、自動でポーズを挿入
+
+### シャドーイングモード
+
+「おすすめ設定で生成」をクリックすると、各単語・文が3回連続で読み上げられます：
+
+| 回目 | 音声 | 速度 |
+|:---:|------|:---:|
+| 1回目 | Aria（アメリカ英語・女声） | −20% |
+| 2回目 | Guy（アメリカ英語・男声） | −30% |
+| 3回目 | Jenny（アメリカ英語・女声） | −10% |
+
+- 各回の間に **0.5 秒**のポーズ — 思い出す時間
+- 文と文の間に **1 秒**のポーズ — 繰り返しや跟読の時間
+
+### 動作環境
+
+| 項目 | 要件 |
+|------|------|
+| OS | macOS |
+| チップ | Apple Silicon（M1 / M2 / M3 / M4） |
+| ネットワーク | 必須（edge-tts はクラウドベース） |
+| Python | 3.9+（ソースコード実行時のみ） |
+
+### インストール
+
+**方法1 — ダウンロード（推奨）**
+
+[Releases](https://github.com/GadflyRun/ReadOutLoud/releases) から `ReadOutLoud.zip` をダウンロードし、解凍後にアプリを「アプリケーション」フォルダへドラッグしてください。
+
+**方法2 — ソースコードから実行**
+
+```bash
+git clone https://github.com/GadflyRun/ReadOutLoud.git
+cd ReadOutLoud
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python3 AudioGenerator.py
+```
+
+**方法3 — .app として自分でビルド**
+
+```bash
+pip install pyinstaller
+pyinstaller ReadOutLoud.spec
+```
+
+### 初回起動時
+
+macOS が「開発元を確認できません」と表示した場合：
+
+1. `ReadOutLoud.app` を**右クリック**
+2. 「**開く**」を選択
+3. ダイアログで再度「**開く**」をクリック
+
+以降は通常通りダブルクリックで起動できます。
+
+### お問い合わせ
+
+- メール：`socranote@gmail.com`
+- WeChat：`yxkenglish`
