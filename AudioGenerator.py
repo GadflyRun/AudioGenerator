@@ -127,6 +127,13 @@ TEXTS = {
         "title_sub": " 一款朗读音频生成器",
         "credit": "由 Socranotes 设计，与 Claude Code 协作开发",
         "input_hint": "输入英文文本，每行一句或一个单词",
+        "sample_text": (
+            "简单说 4 句：\n"
+            "1. 本 App 由 Socranotes 与 Claude Code 制作，完全免费，供英语老师与学习者使用。\n"
+            "2. 你可以输入单词、句子或段落，每行一条，批量生成朗读音频。\n"
+            "3. 如果你想跟读练习，可以直接使用下方的强推设置。\n"
+            "4. 如需反馈问题或交流定制需求，欢迎通过邮箱 socranote@gmail.com 联系我。"
+        ),
         "language_label": "界面语言",
         "voice_label": "语音",
         "rate_label": "语速",
@@ -191,6 +198,13 @@ TEXTS = {
         "title_sub": " ReadOutLoud",
         "credit": "Socranotes が設計し、Claude Code と協力して開発",
         "input_hint": "英語テキストを入力してください。1行に1単語または1文。",
+        "sample_text": (
+            "かんたんな例を 4 行入れてあります：\n"
+            "1. この App は Socranotes と Claude Code が作成しました。無料で使えます。\n"
+            "2. 単語・文・短い段落を 1 行ずつ入力して、まとめて音声化できます。\n"
+            "3. シャドーイング練習には、下のおすすめ設定が便利です。\n"
+            "4. 不具合報告やカスタマイズ相談は socranote@gmail.com までどうぞ。"
+        ),
         "language_label": "表示言語",
         "voice_label": "音声",
         "rate_label": "速度",
@@ -460,6 +474,7 @@ class App:
             pady=10,
         )
         self.text.pack(fill="both", expand=True, padx=self.t["field_bw"], pady=self.t["field_bw"])
+        self.text.insert("1.0", self.tr("sample_text"))
 
         row_file = tk.Frame(wrap, bg=self.t["bg"])
         row_file.pack(fill="x", pady=(10, 4))
